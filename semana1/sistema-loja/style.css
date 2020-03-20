@@ -1,0 +1,65 @@
+
+body {
+  font-family: 'Playfair Display', serif
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  
+}
+
+.menu {
+  text-align: center;
+}
+
+.menu li {
+  display: inline-block;
+  margin-left: 10px;
+  text-transform: uppercase;
+  padding-top: 40px;
+  margin-right: 50px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: black;
+  transition: .5s linear;
+}
+
+.menu a:hover {
+  opacity: .6;
+}
+
+img {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.main {
+  margin-bottom: 200px;
+}
+
+h2 {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+p {
+  margin: 0 20px 0 20px;
+  text-align: center;
+  line-height: 1.5;
+
+}
+
+.footer {
+  background-color: black;
+  height: 100px;
+  
+}
+
+footer div p {
+  color: white;
+  padding: 40px 0;
+} 
