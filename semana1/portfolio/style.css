@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.imagem-principal {
+  width: 100%;
+}
+
+.menu-principal {
+  text-align: right;
+  margin-top: -35px;
+}
+
+.menu-principal li {
+  display: inline;
+  margin-left: 50px;
+  padding-top: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+menu a:hover {
+  color: blueviolet;
+}
+
+.container {
+  width: 700px;
+  margin: 0 auto;
+}
+
+main h1 {
+  padding-top: 80px;
+  max-width: 900px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+main div p {
+  line-height: 1.5;
+}
+
+button {
+  border-radius: 5px 0 0 0;
+  padding: 8px;
+  border: 1px solid black;
+  font-family: inherit;
+  background-color: transparent;
+}
+
+button:hover {
+  opacity: .6;
+}
+
+.container-maior {
+  margin-left: 200px;
+  margin-right: 200px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+h2 {
+  text-align: center;
+  background-color: black;
+  color: white;
+  margin: 200px 0 80px 0;
+  padding: 25px 0 50px 0;
+}
+
+.container-maior img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 50px;
+}
+
+figcaption {
+  text-align: center;
+}
+
+form {
+  text-align: center;
+  padding-bottom: 100px;
+}
+
+footer {
+  padding-top: 40px;
+}
+
+footer div {
+  width: 100%;
+  text-align: center;
+}
+
+
+footer nav ul li {
+  display: inline;
+  list-style: none;
+  margin: 30px;
+}
+
+h6 {
+  text-transform: uppercase;
+  text-align: center;
+}
