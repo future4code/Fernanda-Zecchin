@@ -1,0 +1,80 @@
+
+
+
+.vermelha{
+  background-color:red;
+  width: 900px;
+  height: 150px;
+}
+
+.container1 ul{
+ display: flex;
+ justify-content: space-around;
+ width: 900px;
+}
+
+.container1 ul  #item1, #item2{
+  list-style: none;
+  width: 400px;
+  height: 150px;
+  border: 1px solid black;
+  
+}
+
+#item1{
+  background-color: blue ;
+}
+
+#item2{
+  background-color: yellow;
+}
+
+.container2  #item3{
+  list-style: none;
+  width: 900px;
+  height: 150px;
+  border: 1px solid black;
+}
+
+#item3{
+  background-color: green;
+  
+}
+
+.container3 {
+  display: flex;
+  justify-content: space-around;
+  width: 900px;
+  padding-top: 12px
+ }
+
+ .container ul  #item4, #item5{
+  list-style: none;
+  width: 400px;
+  height: 150px;
+  border: 1px solid black;
+  
+}
+
+ #item4{
+   background-color:blue ;
+   width: 425px;
+ }
+
+ #item5{
+   background-color: yellow;
+ }
+
+ #item6{
+   background-color: green;
+ }
+
+ #item7, #item8{
+   background-color: black;
+ }
+
+ #item9, #item10{
+   border: 1px solid black;
+ }
+
+
