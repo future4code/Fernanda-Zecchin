@@ -164,8 +164,71 @@ let valorDesconto = desconto;
 console.log(valorDesconto);
 */
 
+//a. Procure uma forma de converter libra (lb) para quilograma (kg) e escreva um programa que converta 20lb para kg. Imprima  a resposta no console da seguinte forma: 
 
+/*
+let lb = 20/2.2046;
+let kg = lb;
+console.log(kg);
+*/
 
+//b. Procure uma forma de converter onça (oz) para quilograma (kg) e escreva um programa que converta 10.5oz para kg. Imprima  a resposta no console da seguinte forma: 
+//10.5oz equivalem a X kg
+
+/*
+let oz = 10.5/35.274;
+let kg = oz;
+console.log(kg);
+*/
+
+//c. Procure uma forma de converter milha (mi) para metro (m) e escreva um programa que converta 100mi para m. Imprima  a resposta no console da seguinte forma: 
+//100mi equivalem a X m
+
+/*
+let mi = 100/0.00062137;
+let m = mi;
+console.log(m);
+*/
+
+//d. Procure uma forma de converter pés (ft) para metro (m) e escreva um programa que converta 50ft para m. Imprima  a resposta no console da seguinte forma: 
+//50ft equivalem a X m
+
+/*
+let ft = 50/3.2808;
+let m = ft;
+console.log(m + " metros");
+*/
+
+//e. Procure uma forma de converter galão (gal) para litro (l) e escreva um programa que converta 103.56gal para litro. Imprima  a resposta no console da seguinte forma: 
+//103.56gal equivalem a X l
+
+/*
+let gal = 103.56/0.26417;
+let litro = gal;
+console.log(litro + " l");
+*/
+
+//f. Procure uma forma de converter xícara (xic) para litro (l) e escreva um programa que converta 450xic para litro. Imprima  a resposta no console da seguinte forma: 
+//450 xic equivalem a X l
+
+/*
+let xic = (450*6)/25;
+let litro = xic;
+console.log(litro + " litros");
+*/
+
+//g. Escolha ao menos um dos itens anteriores e modifique o programa para que ele peça ao usuário o valor da unidade original antes de converter. 
+
+/*
+let xic = (450*6)/25;
+let litro = xic;
+console.log(litro + " litros");
+*/
+
+let xic = Number(prompt("Digite a quantidades de xícara(s) para converter em litros "));
+let qtdXicaras = (xic*6)/25;
+let resultado = qtdXicaras + " litros";
+console.log(resultado);
 
 
 
