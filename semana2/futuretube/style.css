@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
+header {
+  background-color: coral;
+  height: 10vh;
+}
+
+h1 {
+  margin: auto;
+}
+
+.container-videos {
+  display: flex;
+  flex-direction: column;
+  width: 95vw;
+  text-align: center;
+  justify-content: center;
+}
+
+.lista-video {
+  margin-top: 8rem;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 3fr 3fr 3fr;
+  height: 115vh;
+}
+
+.lista-video li {
+  list-style: none;
+    
+}
+
+
+
+.rodape {
+  background-color: coral;
+  height: 10vh;
+}
+
+p{
+  color: white;
+  text-align: center;
+}
