@@ -138,6 +138,7 @@ if(numero1 === numero2 && numero1 === numero3 && numero2 === numero3){
 
 //possui pelos? s - mamifero/ mamifero não humano  -n 
 
+
  let ossos = prompt("Possuem ossos? [s/n]");
  switch (ossos) {
    case "s":
@@ -185,9 +186,7 @@ if(numero1 === numero2 && numero1 === numero3 && numero2 === numero3){
     default:
       break;
   }
-
-
-  
   
 
 
+ 
