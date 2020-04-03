@@ -131,3 +131,62 @@ if(numero1 === numero2 && numero1 === numero3 && numero2 === numero3){
 }
 
 */
+// Vamos criar um programa que classifique os animais dados alguns critérios. O primeiro critério de divisão é se eles possuem ossos formando seu esqueleto ou não. Caso possuam, são vertebrados, caso contrário, invertebrados. O nosso foco é realizar a classificação só do primeiro caso. Se possuir pelos, entende-se que ele é um mamífero; e este pode ser classificado como um ser humano ou não (mamífero não humano), simplesmente, pelo fato dele ser considerado racional ou não. Se não for mamífero, entende-se que ele é uma ave, se possuir penas. Se não possuir, devemos entender uma característica importante: se ele é um animal terrestre. Se não for, diz-se que é um peixe; se  for, ele pode ser um anfíbio ou um réptil. Ele será o primeiro (anfíbio), se passar uma parte da vida em ambiente aquático; e será o segundo (réptil), caso contrário.
+// a. Escreva o diagrama esquemático que melhor represente a árvore condicional do exercício. (Coloque a imagem do esquema no drive e gerem um link de compartilhamento público. Coloque este link num comentário durante a resolução deste exercício)
+
+// b. Escreva um programa que realize estas perguntas  e indique a classificação final considerada. As opções são: ser humano; mamífero não humano; ave; réptil; anfíbio; peixe ou é invertebrado
+
+//possui pelos? s - mamifero/ mamifero não humano  -n 
+
+
+ let ossos = prompt("Possuem ossos? [s/n]");
+ switch (ossos) {
+   case "s":
+     console.log("vertebrados")
+    break;
+    
+     case "n":
+     console.log("invertebrados")
+    break;
+  }
+
+  let pelo = prompt("Possuem pelos? [s/n]");
+  switch (pelo) {
+    case "s":
+      console.log("mamifero")
+      break;
+      
+    case "n":
+      console.log("Não é um mamífero, pode ser uma ave!")
+    
+  }
+  // Se não for mamífero, entende-se que ele é uma ave, se possuir penas. Se não possuir, devemos entender uma característica importante: se ele é um animal terrestre.
+
+  let penas = prompt("Possui penas?[s/n]");
+  switch (penas) {
+    case "s":
+      console.log("pode ser uma ave")
+      break;
+
+      case "n":
+        console.log("Pode ser um animal terreste")
+     
+  }
+
+  // Se não for, diz-se que é um peixe; se  for, ele pode ser um anfíbio ou um réptil.
+
+  let animalTerrestre = prompt("É um animaç terreste? [s/n]");
+  switch (animalTerrestre) {
+    case "n":
+      console.log("É um peixe")
+      break;
+      
+      case "s":
+        console.log("Pode ser um anfibio ou um reptil")
+    default:
+      break;
+  }
+  
+
+
+ 

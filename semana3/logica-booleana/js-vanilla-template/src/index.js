@@ -225,10 +225,13 @@ let litro = xic;
 console.log(litro + " litros");
 */
 
+/*
 let xic = Number(prompt("Digite a quantidades de xícara(s) para converter em litros "));
 let qtdXicaras = (xic*6)/25;
 let resultado = qtdXicaras + " litros";
 console.log(resultado);
+
+*/
 
 
 
