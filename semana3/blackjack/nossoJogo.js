@@ -10,3 +10,18 @@
  * 
  * 
  */
+
+ //1 - Imprime uma mensagem no console "Bem vindo ao jogo de Blackjack!".
+
+ console.log("Bem vindo ao jogo de Blackjack!");
+let confirmacao = confirm("Quer uma nova rodada? s/n?") ;
+if (confirmacao == true) {
+   console.log("Vamos jogar");
+} else {
+   console.log("Jogo acabou");
+}
+//contador
+
+const carta = comprarCarta();
+console.log(carta.texto);
+console.log(carta.valor);
