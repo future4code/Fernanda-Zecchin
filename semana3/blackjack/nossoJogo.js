@@ -1,27 +1,32 @@
-/**
- * EXEMPLO DE UTILIZAÇÃO DA 'comprarCarta'
- * 
- * 
-    const carta = comprarCarta(); // Sorteia uma carta. Por exemplo, o rei de ouros
-    
-    console.log(carta.texto) // imprime o texto da carta. Exemplo: "K♦️" (indica "K" de ouros)
-    console.log(carta.valor) // imprime o valor da carta (um número). Exemplo: 10 (dado que "K" vale 10)
- * 
- * 
- * 
- */
+console.log("Bem vindo ao jogo BlackJack!");
+let cartasComputador="Computador - cartas";
+let cartasUsuario="Usuário - cartas";
+pontosComputador = 0;
+pontosUsuario = 0;
 
- //1 - Imprime uma mensagem no console "Bem vindo ao jogo de Blackjack!".
+if (confirm("Quer iniciar uma nova rodada?")) {
+   for(let i=0; i<2; i++){
+      let carta = comprarCarta();
+      cartasComputador+=carta.texto+" ";
+      pontosComputador+=carta.valor;
+       carta = comprarCarta();
+      cartasUsuario+=carta.texto+" ";
+      pontosUsuario+=carta.valor;
+      
+   }
+   console.log(cartasComputador, `pontuação - ${pontosComputador}`);
+   
+   console.log(cartasUsuario, `pontuação - ${pontosUsuario}`);
 
- console.log("Bem vindo ao jogo de Blackjack!");
-let confirmacao = confirm("Quer uma nova rodada? s/n?") ;
-if (confirmacao == true) {
-   console.log("Vamos jogar");
+   if((pontosUsuario > pontosComputador)&& pontosUsuario <=21 || (pontosComputador >21 && pontosUsuario<=21)){
+   console.log("Usuário ganhou")
+   } else if ((pontosComputador > pontosUsuario)&& pontosComputador <=21 || (pontosUsuario >21 && pontosComputador <=21)){
+      console.log("O computador ganhou")    
+   } else{
+      console.log("Empate")
+   }
+
+   
 } else {
-   console.log("Jogo acabou");
+    console.log("O jogo acabou")
 }
-//contador
-
-const carta = comprarCarta();
-console.log(carta.texto);
-console.log(carta.valor);
