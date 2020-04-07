@@ -35,39 +35,29 @@
 
 
 //b. O código funcionaria se a lista fosse um array de números (ao invés de um array de string)  e o nome fosse um número, ao se chamar a função? Justifique sua resposta.
-//Funcionaria, pois ele procura o tipo o indice do array. O código ficaria assim:
-
-// let numero = [1, 2, 3, 4, 5];
-
-// 	const funcao = (lista, numero) => {
-// 	  for (let i = 0; i < lista.length; i++) {
-// 	    if (lista[i] === numero) {
-// 	      return i;
-// 	    }
-// 	  }
-// 	};
-	
-// 	console.log(funcao(numero, 1));
-// 	console.log(funcao(numero, 2));
-// 	console.log(funcao(numero, 3));
+//Funcionaria, Ele procura se existe o numero dentro do array, de acordo com o parametro especificado.
 
 
 //Exerc.3
 // Colem a função no arquivo .js e criem dois arrays quaisquer, sendo um com alguns números e outro vazio. Em seguida, chamem a função no array vazio, passando o array de números como parâmetro. Printem a array que inicialmente estava vazia e vejam o comportamento. 
+// const array = [1,2,3,4]
+// let array1=[]
 //  function metodo(array) {
-//   let resultadoA = 0;
-//   let resultadoB = 1;
-//   let arrayFinal = [];
+//    let resultadoA = 0;
+//    let resultadoB = 1;
+//    let arrayFinal = [];
 
-//   for (let x of array) {
-//     resultadoA += x;
-//     resultadoB *= x;
-//   }
+//    for (let x of array) {
+//      resultadoA += x;
+//      resultadoB *= x;
+//    }
 
-//  console.log(arrayFinal.push(resultadoA));
-//  console.log(arrayFinal.push(resultadoB));
-//   return arrayFinal;
-// }
+//   (arrayFinal.push(resultadoA));
+//   (arrayFinal.push(resultadoB));
+//    return arrayFinal;
+//  }
+//  array1 = metodo(array)
+ //
 
 //Exerc.4
 
@@ -75,18 +65,41 @@
 //   return idade*7
 // }
 // console.log(cachorro(4));
-nome = "Fernanda"
-idade = 34
-endereco = "SP"
-eEstudante = true
-function dados(nome, idade, endereco, eEstudante){
- if(eEstudante === true){
-   console.log("sou estudante")
- }else {
-   console.log("não sou estudante")
+// nome = "Fernanda"
+// idade = 34
+// endereco = "SP"
+// eEstudante = "sou estudante"
+// function dados(nome, idade, endereco, eEstudante){
+//  if(eEstudante === true){
+//    console.log("sou estudante")
+//  }else {
+//    console.log("não sou estudante")
   
- }
- 
-console.log(`Eu sou ${nome}, tenho ${idade} anos, moro em ${endereco} e ${eEstudante} `);
+//  }
+//  return `Eu sou ${nome}, tenho ${idade} anos, moro em ${endereco} e ${eEstudante} `
+
+// }
+// console.log(dados(nome,idade,endereco,eEstudante))
+
+//Exer.6
+//Letra -A-  const array = [10, 23, 45, 78, 90, 52, 35, 67, 84, 22]
+// function arraysNumeros(quantidadeArrays){
+//   for (let i = 0; i < quantidadeArrays.length; i++) {
+//     	    if (quantidadeArrays[i] === arraysNumeros) {
+//      	      return i;
+// }
+//   }
+// }
+
+//Letra- B
+const array = [10, 23, 45, 78, 90, 52, 35, 67, 84, 22]
+
+function ePar(array){
+  
+  if (array%2 ===0) {
+    console.log("É par")
+  } else {
+    console.log("É impar")    
+  }
 }
-dados(nome, idade, endereco, eEstudante)
+(ePar(array);
