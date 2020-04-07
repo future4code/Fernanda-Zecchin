@@ -1,11 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
   <title>Document</title>
 </head>
+
 <body>
-  
+  <div class="container">
+    <label for="Nova Tarefa"></label>
+    <input type="text" name="novaTarefa" id="novaTarefa">
+    <select id="diaSemana" name="diaSemana">
+      <option>Segunda</option>
+      <option>Terça</option>
+      <option>Quarta</option>
+      <option>Quinta</option>
+      <option>Sexta</option>
+      <option>Sábado</option>
+      <option>Domingo</option>
+    </select>
+    <button onclick="teste()">Criar Tarefa</button>
+  </div>
+  <hr>
+  <main>
+    <div id="espacoTexto"></div>
+        <div id="segunda">
+          Segunda
+          <ul></ul>
+        </div>
+
+        <div id="terca">
+          Terça
+          <ul></ul>
+        </div>
+
+        <div id="quarta">
+          Quarta
+          <ul></ul>
+        </div>
+
+        <div id="quinta">
+          Quinta
+          <ul></ul>
+        </div>
+
+        <div id="sexta">
+          Sexta
+          <ul></ul>
+        </div>
+
+        <div id="sabado">
+          Sábado
+          <ul></ul>
+        </div>
+
+        <div id="domingo">
+          Domingo
+          <ul></ul>
+        </div>
+  </main>
+
 </body>
+
 </html>
