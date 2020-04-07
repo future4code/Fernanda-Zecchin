@@ -95,20 +95,41 @@ let novaArray = []
   */
 
 //Letra C
-
-const numeros = [20, 22, 54, 68, 99, 105, 57, 12, 52];
-for (const iterator of object) {
-  
-}
-
 /*
-for (let i = 0; i < numeros; i++) {
-   if(i %2 ===0 ){
-     console.log("é par ", i)
-   }  
-
+const numeros = [20, 22, 54, 68, 99, 105, 57, 12, 52];
+ novoArray = [];
+for (let pares of numeros) {
+  if(pares%2 === 0){
+    novoArray.push(pares);
+  }
 }
+console.log(novoArray);
+
+
+
+const array = [20, 22, 54, 68, 99, 105, 57, 12, 52];
+let novaArray = ""  
+    for(let numero of array){
+        novaArray.push(array);
+    }
+    console.log(novaArray);
+
 */
+
+const numeros = [11, 15, 18, 14, 12, 13]
+let maior = numeros[0]
+
+for(let i = 0; i < 6; i++) {
+    const elemento = numeros[i]
+
+    if(elemento > maior) {
+        maior = elemento
+    }
+}
+
+console.log(maior)
+
+
 
 
 
