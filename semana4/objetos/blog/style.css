@@ -1,0 +1,9 @@
+input, textarea{
+  display:block ;
+ 
+}
+/* criar os posts do mais novo para o mais antigo, flex afeta os filhos diretamente filhos dele, por isso foi criada uma div no js, para as divs se comportarem como flex.*/
+#espacoPosts{
+  display: flex;
+  flex-direction: column-reverse;
+}
