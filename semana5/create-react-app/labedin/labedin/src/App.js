@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import CardGrande from './components/CardGrande/CardGrande';
 import ImagemButton from './components/ImagemButton/ImagemButton';
+import CardPequeno from './components/CardPequeno/CardPequeno';
 
 function App() {
   return (
@@ -10,8 +11,8 @@ function App() {
         <h2>Dados pessoais</h2>
         <CardGrande 
           imagem="https://uploads-ssl.webflow.com/5d640f4558306be99cf47a0e/5dd57846babb597b77c6bb1d_PerfilFuture4_cor.png" 
-          nome="Astrodev" 
-          descricao="Oi, eu sou o Astrodev. Sou o chefe dos alunos da Labenu. Adoro pedir e-mails na sexta-feira e esperar os alunos responderem só para responder com uma bronca e dar mais trabalho para eles."
+          nome="Fernanda Zecchin" 
+          descricao="Oi, eu sou a Fernanda. Tenho 35 anos e sou novata na área =] ."
         />
         
         <ImagemButton 
@@ -21,11 +22,25 @@ function App() {
       </div>
 
       <div className="page-section-container">
+       <CardPequeno
+       nome="Email" 
+       descricao="fe@yahoo.com.br"
+      />
+     </div>
+
+     <div className="page-section-container">
+       <CardPequeno
+       nome="Email"
+       descricao="fe@yahoo.com.br"
+      />
+     </div>
+
+      <div className="page-section-container">
         <h2>Experiências profissionais</h2>
         <CardGrande 
           imagem="https://s3.amazonaws.com/future4.com.br/static/headf4-c492117ca2373dc85ca81bf715b3dc2a.png" 
           nome="Labenu" 
-          descricao="Formando desenvolvedores para o mercado de trabalho!" 
+          descricao="Estudante" 
         />
         
         <CardGrande 
