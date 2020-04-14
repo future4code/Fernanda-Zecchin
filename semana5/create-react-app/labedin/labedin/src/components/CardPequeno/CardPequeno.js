@@ -5,10 +5,10 @@ function CardPequeno(props) {
    return (
      <div className="smallcard-container">
 
-       <div>
-           <b>{props.nome}</b>
-           <p>{props.descricao}</p>
-       </div>
+
+           <img src={props.imagem}/>
+           <p><b>{props.nome}</b> {props.descricao}</p>
+       
       </div>
    );
 }

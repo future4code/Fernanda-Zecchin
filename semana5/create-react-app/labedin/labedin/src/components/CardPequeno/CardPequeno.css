@@ -7,11 +7,13 @@
   height: 80px;
 }
 
-
-
-.smallcard-container h4 {
-  margin-bottom: 15px;
+.smallcard-container img{
+  border-radius: 50%;
+  width: 30px;
+  margin-right: 10px;
 }
+
+
 
 .smallcard-container > div {
   display: flex;
