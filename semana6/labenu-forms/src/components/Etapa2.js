@@ -9,7 +9,7 @@ export class Etapa2 extends React.Component{
       <input placeholder={'h1'}/>
       <p>6. Qual a unidade de ensino?</p>
       <input placeholder={'h1'}/>
-      <button>Próxima Etapa</button>
+     
     </div>
   }
 }

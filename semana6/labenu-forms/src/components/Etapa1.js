@@ -27,15 +27,13 @@ export class Etapa1 extends React.Component{
     return <div>
       <h1>Etapa1 - Dados Gerais</h1>
 
-      <label>1. Qual seu nome?</label>
+      <p>1. Qual seu nome?</p>
       <input placeholder={'Seu Nome'} onChange={this.onChangevalorNome} value={this.state.valorNome}/>
-      <label>2. Qual sua idade?</label>
+      <p>2. Qual sua idade?</p>
       <input placeholder={'Sua Idade'} onChange={this.onChangevalorIdade} value={this.state.valorIdade} />
-      <label>3. Qual seu email?</label>
+      <p>3. Qual seu email?</p>
       <input placeholder={'Seu E-mail'} onChange={this.onChangevalorEmail} value={this.state.valorEmail}  />
-      <label>
-        
-        4. Qual a sua escolaridade
+      <p>4. Qual a sua escolaridade?  </p>
         <select value={''}>
           <option value={''}></option>
           <option value={'medioIncompleto'}>Ensino Médio Incompleto</option>
@@ -44,8 +42,8 @@ export class Etapa1 extends React.Component{
           <option value={'superiorCompleto'}>Ensino Superior Completo</option>
           
         </select>
-      </label>
-      <button>Próxima Etapa</button>
+    
+      
 
     </div>
   }
