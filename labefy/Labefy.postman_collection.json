@@ -72,9 +72,32 @@
 			"name": "Search Playlist",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "fernanda-zecchin-julian",
+						"type": "text"
+					}
+				],
 				"url": {
-					"raw": ""
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/search?name=Rock",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Rock"
+						}
+					]
 				}
 			},
 			"response": []
@@ -92,7 +115,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"name\": \" Hurt\",\n\t\"artist\": \"Nine Inch Nails\",\n\t\"url\": \"https://www.youtube.com/watch?v=LnHoqHscTKE\"\n}\n",
+					"raw": "{\n\t\"name\": \"  Rainbow In The Dark\",\n\t\"artist\": \"Dio\",\n\t\"url\": \"https://www.youtube.com/watch?v=zcsE9ObDPxA\"\n}\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -118,33 +141,6 @@
 							"key": "playlistId",
 							"value": "d823bcfe-da54-4877-a2c7-6fe0b35383ee"
 						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Get All Playlist",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "fernanda-zecchin-julian",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists\n",
-					"protocol": "https",
-					"host": [
-						"us-central1-labenu-apis",
-						"cloudfunctions",
-						"net"
-					],
-					"path": [
-						"labefy",
-						"playlists\n"
 					]
 				}
 			},
@@ -178,7 +174,81 @@
 					"variable": [
 						{
 							"key": "playlistId",
-							"value": "c85c0c41-c952-4214-bd99-66fd6fadf318"
+							"value": "d823bcfe-da54-4877-a2c7-6fe0b35383ee"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Track From Playlist",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "fernanda-zecchin-julian",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlistId/tracks/:trackId\n",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						":playlistId",
+						"tracks",
+						":trackId\n"
+					],
+					"variable": [
+						{
+							"key": "playlistId",
+							"value": "d823bcfe-da54-4877-a2c7-6fe0b35383ee"
+						},
+						{
+							"key": "trackId\n",
+							"value": "38d313d5-4e54-42e0-8e4c-efb5ec6de64b"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Playlist",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "fernanda-zecchin-julian",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlistId\n",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						":playlistId\n"
+					],
+					"variable": [
+						{
+							"key": "playlistId\n",
+							"value": "6d3d54b5-beb3-4b36-8d46-4a732e6612c8"
 						}
 					]
 				}
