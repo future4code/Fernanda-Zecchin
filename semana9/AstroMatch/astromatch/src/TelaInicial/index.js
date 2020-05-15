@@ -4,6 +4,7 @@ import ClearIcon from '@material-ui/icons/Clear'
 import Botao from '@material-ui/core/Button'
 import axios from 'axios';
 import  {FaUserCheck}  from "react-icons/fa";
+
 import {
   MatchContainer, 
   Imagem,
@@ -24,55 +25,49 @@ const baseUrl = "https://us-central1-missao-newton.cloudfunctions.net/astroMatch
 
 function TelaInicial(props) {
 
-  const [profile, setProfile] = useState({
-    profile: {
-      id: "xUrxMGvODWZa4ZASbfwx",
-      age: 26,
-      name: "Carol Danvers",
-      photo: "https://s1.r29static.com/bin/entry/7e8/340x408,85/2138124/image.webp",
-      bio: "Gosto de voar e de gatos. Procuro relações que respeitem minha independência."
-    }
-   })
+  
+  const [profile, setProfile] = useState({});
 
- const [ escolhaPessoa, setEscolhaPessoa] = useState({
-   pessoaEscolhida:{
-    "id": "71gMbZs2txS9LDvGK5Ew",
-    "choice": true
-  }
- })
+ 
+
 
 
   useEffect(() => {
-    axios
-      .get(baseUrl)
-      .then(response => {
-        setProfile(response.data.profile);
-      })
-      .catch(err => {
-        console.log(err)
-      });
-
+   mostraPessoas()
      
 
-  }, [])
+  }, []);
 
-  const pessoaEscolhida = () => {
-    console.log(escolhaPessoa.id)
+  const mostraPessoas = () => {
+    axios
+    .get(baseUrl)
+    .then(response => {
+      setProfile(response.data.profile);
+    })
+    .catch(err => {
+      console.log(err)
+    });
+   
+  }
+
+  const pessoaEscolhida = (id) => {
+   
     const body = {
-      id: escolhaPessoa.id,
+      id: id,
       choice: true
     }
-    axios.
-    post(`https://us-central1-missao-newton.cloudfunctions.net/astroMatch/fernanda/choose-person`, body, {
-      headers: {'Content-Type': 'application/json'}
-    }) .then((response) => {
-      setEscolhaPessoa(response)
+    axios.post(`https://us-central1-missao-newton.cloudfunctions.net/astroMatch/fernanda/choose-person`, body)
+    .then((response) => {
+     
     }).catch(err => {
       console.log(err)
     })
-  
+    //mostraPessoas()
   }
+  
+ 
 
+  
 
   return(
     <div>
@@ -80,7 +75,7 @@ function TelaInicial(props) {
         <MatchContainer>
             <Cabecalho>
               <Titulo>AstroMatch </Titulo>
-              <FaUserCheck color='purple' size='2rem' />
+              <FaUserCheck  color='purple' size='2rem' />
             </Cabecalho>
 
                 <div>
@@ -89,16 +84,13 @@ function TelaInicial(props) {
                 <Descricao>
                   <Nome>{profile.name},</Nome>
                   <Idade>{profile.age}</Idade>
+                  <Bio>{profile.bio}</Bio> 
               </Descricao>
-          
-
-              <Bio>
-                {profile.bio}
-              </Bio>
+              
 
               <Botoes>
-                  <Botao onClick={pessoaEscolhida} variant="fab"  size="large"  > <CoracaoIcon/></Botao>
-                  <Botao variant="fab"  size="large" ><ClearIcon/></Botao>
+                  <Botao onClick={pessoaEscolhida(profile.id)}  variant="outline"  size="large"  ><CoracaoIcon/> </Botao>
+                  <Botao  variant="fab"  size="large" ><ClearIcon/></Botao>
               </Botoes>
 
         </MatchContainer>

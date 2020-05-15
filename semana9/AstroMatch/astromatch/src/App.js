@@ -17,12 +17,14 @@ const ContainerPrincipal = styled.div`
 function App() {
    
   
+  
 
   return (
     <ContainerPrincipal>
     
       
       <TelaInicial/>
+      
       <Match/>
      
     </ContainerPrincipal>

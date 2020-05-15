@@ -13,7 +13,7 @@ export const MatchContainer = styled(Paper)`
     display:flex;
     flex-direction:column;
     align-items: center;
-    z-index:2;
+    
     margin:0 auto;
     border: 1px solid black 
     
@@ -36,22 +36,26 @@ export const Titulo = styled.h1`
 `
 
 export const Imagem = styled.img`
-  
+   border: 1px solid black;
    width:30vw;
-   height: 40vh
+   height: 50vh;
    
    
 `
 
 export const Botoes = styled.div`
-    margin-top: 15px;
+    margin-top: 3rem;
+    display:flex;
+    
    
 `
 export const Descricao = styled.div`
    display: flex;
-   align-items: baseline;
+   flex-direction: column;
+   
    position: absolute;
-   margin-top: 300px;
+   margin-top: 400px;
+   
 `
 
 export const Nome = styled.div`
@@ -67,7 +71,10 @@ export const Idade = styled.div`
 `
 
 export const Bio = styled.div`
-   padding-top: 30px;
+   width:30vw;
+   height: 50vh;
+   color: whitesmoke;
+
  
 
 `
