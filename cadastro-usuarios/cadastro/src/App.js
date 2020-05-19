@@ -1,15 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const FormContainer = styled.div`
-  border: 2px solid black;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  margin: auto 0;
-  height: 60vh;
+import {PaginaForm} from './components/PaginaForm';
+import {ListaUsuario} from './components/ListaUsuario';
 
-`
+
+
+
 const BotaoSalvar = styled.button`
   margin-top: 1rem;
   background-color:black;
@@ -21,21 +18,41 @@ const BotaoSalvar = styled.button`
 
 
 class App extends React.Component {
+
+   state = {
+     mudaPagina: 'cadastro'
+   };
+   
+ 
+   onClickmudarPag = () => {
+     const proxPagina = (this.state.mudaPagina === 'cadastro') ? ('lista') : ('cadastro')
+     this.setState({mudaPagina: proxPagina})
+  }
+
+
+
   render () {
     return (
       <div>
-      < FormContainer>
-        <h1>Cadastro</h1>
-        <p>Nome:</p>
-        <input/>
-        <p>E-mail:</p>
-        <input/>
-        <BotaoSalvar>Salvar</BotaoSalvar>
-        <BotaoSalvar>Ir para página de lista</BotaoSalvar>
-      </ FormContainer>
+      
+      <BotaoSalvar onClick={this.onClickmudarPag}>
+        {this.state.mudaPagina === 'lista'
+          ? 'Ir para a lista'
+          : 'Voltar para formulario'}
+      </BotaoSalvar>
+      {this.state.mudaPagina === 'lista' ? (
+        <PaginaForm/>
+         ) : (
+        <ListaUsuario/>
+    )}
+        
+       
+     
+
       </div>
     )
   }
 }
 
 export default App;
+
