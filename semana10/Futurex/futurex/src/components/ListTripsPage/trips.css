@@ -1,0 +1,55 @@
+body {
+  background-color:rgb(255, 255, 255);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  margin-top: 1rem;
+  border: 1px solid black;
+  padding: 2rem 0 2rem 1rem;
+  row-gap: 20px;
+
+}
+
+.foto1, .foto2, .foto3, .foto4, .foto5, .foto6{
+  position: relative;
+  text-align: center;
+  color: white;
+    
+}
+
+.fotoprincipal{
+  width: 100%;
+  height: auto;
+   
+}
+
+.descricao{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+button {
+    
+    background: white;
+    border: none;
+    border-radius: 15px;
+    margin: 1rem;
+    font-weight: 500;
+    height: 30px;
+       
+    color: black;
+    cursor: pointer;
+}
+
+.botao_container{
+  display: flex;
+  flex-direction: column;
+ 
+}
