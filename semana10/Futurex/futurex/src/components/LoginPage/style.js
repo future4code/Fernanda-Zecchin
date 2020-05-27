@@ -9,21 +9,26 @@ export const ContainerPrincipal = styled.div`
      width: 100vw;
      height:100vh;
      background-color: #2B2D3C;
+     position:relative;
 
 `
-
+export const ContainerLogo = styled.div`
+    position: absolute;
+    top: 2px;
+    width:100%;
+ 
+`
 
 export const LogoPhoto = styled.img`
     width: 20%;  
-    margin: 10px;
-    margin-bottom: 5rem;
+    
     
 `
 
 export const Container = styled.div`
   display:flex;
   justify-content:space-evenly;
-  margin: 0;
+  
 
   
 `
@@ -31,9 +36,13 @@ export const Container = styled.div`
 export const Nome = styled.input`
    background-color:#2B2D3C;
    border: none;
+   outline-color:#FEE600;
    border-bottom: 1px solid yellow;
    margin-bottom: 2rem;  
    width: 50vw;
+   ::placeholder{
+       color:white;
+   }
 
 ` 
 
@@ -47,8 +56,12 @@ export const ContainerSenha = styled.div`
 export const Senha = styled.input`
    background-color:#2B2D3C;
    border: none;
+   outline-color:#FEE600;
    border-bottom: 1px solid yellow;
    width: 50vw;
+   ::placeholder{
+       color:white;
+   }
    
 ` 
 

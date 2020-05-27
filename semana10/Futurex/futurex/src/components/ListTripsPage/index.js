@@ -47,9 +47,9 @@ const goToForm = () => {
           <div className="foto1">
             <img src={'https://picsum.photos/200/300'}  alt='foto'/>
             <div className="descricao">
-              <div>{trips.map((trips) => {
-                return <div>{trips.description}</div>
-              })}</div>
+            <h3>{trips.map((trips) => {
+                  return <h3>{trips.name}</h3>
+                })}</h3>
             <h3>Surfando em Marte</h3>
             <button onClick={goToDetailsTripPage}>saiba mais</button>
             <button onClick={goToForm}>Inscreva-se</button>
@@ -62,8 +62,8 @@ const goToForm = () => {
             <div className="descricao">
                <h3>Surfando em marte</h3>
               <div className="botao_container">
-                <button>saiba mais </button>
-                <button>inscreva-se</button>
+                <button className="botao">saiba mais </button>
+                <button className="botao" onClick={goToForm}>inscreva-se</button>
               </div>
             </div>
           </div>

@@ -8,6 +8,7 @@ import {Container,
         Botao,
         ContainerPrincipal,
         LogoPhoto,
+        ContainerLogo,
         
 
                 } from '../LoginPage/style';
@@ -44,9 +45,9 @@ export const LoginPage = () => {
   return (
     <div>
      <ContainerPrincipal>
-      
+      <ContainerLogo>
          <LogoPhoto src={logo} alt='logo'/>
-       
+       </ContainerLogo>
           <Container>
             <Nome type="email" placeholder={"Seu Email"} value={email} onChange={onChangeEmail}/>
           </Container>
@@ -56,7 +57,7 @@ export const LoginPage = () => {
             </ContainerSenha>
         
             <BotaoContainer>
-              <Botao onClick={handleLogin}>Enviar</Botao>
+              <Botao onClick={handleLogin}>enviar</Botao>
             </BotaoContainer>
       </ContainerPrincipal>
     </div>

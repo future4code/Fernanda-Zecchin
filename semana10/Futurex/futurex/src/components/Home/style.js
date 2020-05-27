@@ -33,7 +33,7 @@ export const BotaoLogin = styled.button`
     border: 1px solid white;
     border-radius: 15px;
     width: 15%;
-    height: 30px;
+    height: 35px;
     color: #FEE600;
     cursor: pointer;
     
@@ -44,7 +44,7 @@ export const BotaoSignup = styled.button`
     border: 1px solid white;
     border-radius: 15px;
     width: 15%;
-    height: 30px;
+    height: 35px;
     color: #FEE600;
     cursor: pointer;
 `  
@@ -70,7 +70,7 @@ export const Titulo = styled.h1`
 
 export const Paragrafo = styled.p`
    margin-left: 18rem;
-   margin-top: -1rem;
+   margin-top: 1rem;
    color: whitesmoke;
    font-size: 12px;
 
