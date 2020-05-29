@@ -1,31 +1,56 @@
-import React, {useState} from 'react'
-import {FormCandidate} from './style'
+import React  from 'react';
+import {FormCandidate} from './style';
+import {useForm} from '../HooksForms/useForms';
+import axios from 'axios';
+import {useParams, useHistory} from 'react-router-dom'
 
-  const useForm = initialValues => {
-    const [form, setForm] = useState(initialValues);
-
-    const onChange = (name, value) => {
-      const newForm = {...form, [name]: value};
-      setForm(newForm);
-    };
-    return {form, onChange}
-  }
 
 function Form() {
-  const {form, onChange} = useForm({nome:"", age:"", applicationText:"", profession:""})
+    
+  const submitCandidate = async () => {
+    const body = {
+      name: form.name,
+      age: form.age,
+      applicationText: form.applicationText ,
+      profession: form.profession,
+      country: form.country, 
+    }
+    const response = await axios.post (
+      `https://us-central1-labenu-apis.cloudfunctions.net/labeX/fernanda/trips/${params.id}/apply`,body)
+      console.log(response)
+  };
+    
+    const params = useParams();
+
+
+  const {form, onChange, resetForm} = useForm({
+    name:"", 
+    age:"", 
+    applicationText:"", 
+    profession:"",
+    country:""
+  });
 
   const handleInputChange = event => {
     const {name, value} = event.target;
 
     onChange(name,value);
-  }
+  };
+
+  const handleSubmit = event => {
+     event.preventDefault()
+  };
+  
+  
+
   return (
     <div>
-      <FormCandidate>
+      <FormCandidate onSubmit={handleSubmit}>
         <input
           value={form.name}
           type="text"
-          name="nome"
+          name="name"
+          pattern={["[A-Za-z ]{3,}"]}
           placeholder="Nome"
           required
           onChange={handleInputChange}
@@ -45,7 +70,9 @@ function Form() {
           value={form.applicationText}
           type="text"
           name="applicationText"
-          placeholder="Porque sou um bom canditado"
+          placeholder="Porque devo ser escolhido"
+          min="30"
+          required
           onChange={handleInputChange}
           />  
 
@@ -54,11 +81,13 @@ function Form() {
           type="text"
           name="profession"
           placeholder="Profissão"
+          required
           onChange={handleInputChange}
         />         
 
-          <select name="paises" id="paises">
-            <option value="Brasil" selected="selected">Brasil</option>
+          <select name="country" value={form.country} onChange={handleInputChange}>
+          <option value="" >Escolha o país</option>
+            <option value="Brasil" >Brasil</option>
             <option value="Afeganistão">Afeganistão</option>
             <option value="África do Sul">África do Sul</option>
             <option value="Albânia">Albânia</option>
@@ -309,6 +338,8 @@ function Form() {
             <option value="Zimbabwe">Zimbabwe</option>
             <option value="Zâmbia">Zâmbia</option>
           </select>
+          <button onClick={submitCandidate}>enviar</button>
+          <button onClick={resetForm}>limpar campos</button>
       </FormCandidate>
     
       

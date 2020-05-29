@@ -30,7 +30,7 @@ function Router(props) {
           <Route exact path="/details">
              <TripDetailsPage/>
           </Route>
-          <Route exact path="/form">
+          <Route exact path="/form/">
              <Form/>
           </Route>
                 
