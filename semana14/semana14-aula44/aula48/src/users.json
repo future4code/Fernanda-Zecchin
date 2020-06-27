@@ -1,0 +1,60 @@
+[
+  {
+    "name": "Rumple",
+    "birthDate": "06/07/2000",
+    "cpf": "147.258.222-25",
+    "balance": 0,
+    "extract": [
+      {
+        "description": "Academia",
+        "value": "200",
+        "date": "24/04/2020"
+      }
+    ]
+  },
+  {
+    "name": "Ronaldo",
+    "birthDate": "14/02/1993",
+    "cpf": "258.741.963-66",
+    "balance": 0,
+    "extract": [
+      {
+        "description": "Padaria",
+        "value": "20",
+        "date": "27/01/2020"
+      }
+    ]
+  },
+  {
+    "name": "Tabata",
+    "birthDate": "21/05/1995",
+    "cpf": "147.201.222-99",
+    "balance": 0,
+    "extract": []
+  },
+  {
+    "name": "Jaqueline",
+    "birthDate": "21/05/1990",
+    "cpf": "148.201.222-95",
+    "balance": 0,
+    "extract": []
+  },
+  {
+    "balance": 0,
+    "extract": []
+  },
+  {
+    "name": "Jonas",
+    "birthDate": "10/04/1990",
+    "cpf": "123.456.789-99",
+    "balance": 0,
+    "extract": []
+  },
+  {
+    "name": "Joana",
+    "birthDate": "17/01/1990",
+    "cpf": "111.222.521-77",
+    "balance": 0,
+    "extract": []
+  }
+]
