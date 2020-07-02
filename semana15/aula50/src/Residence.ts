@@ -9,7 +9,8 @@ export class Residence extends Place {
   ) {
     super(cep);
   }
-  public getCep():string {
-    return this.cep
+  public getresidentsQuantity(): number {
+    return this.residentsQuantity
   }
 }
+

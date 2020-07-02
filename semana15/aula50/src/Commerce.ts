@@ -9,4 +9,7 @@ export class Commerce extends Place {
   ) {
     super(cep);
   }
+  public getfloorsQuantity(): number {
+    return this.floorsQuantity
+  }
 }
